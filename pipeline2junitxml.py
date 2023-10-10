@@ -24,7 +24,8 @@ if not xml_name:
 	xml_name = "PipelineResultsAsJunitReport.xml"
 
 severityStrings = {}
-severityStrings["1"] = "Informational"
+severityStrings["0"] = "Informational"
+severityStrings["1"] = "Very Low"
 severityStrings["2"] = "Low"
 severityStrings["3"] = "Medium"
 severityStrings["4"] = "High"
