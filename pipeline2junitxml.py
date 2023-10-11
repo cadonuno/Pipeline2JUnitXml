@@ -10,7 +10,7 @@ modules={}
 flaws={}
 testCaseTree={"findings": None, "children": {}}
 #
-# Setup CLI Parser //  --html flag will create a local html report -f filename.json will pass a specific filename for your json file
+# Setup CLI Parser
 #
 parser = argparse.ArgumentParser(description='Accept flags from CLI')
 parser.add_argument('-f', action="store", dest="f", help="Pass the filename of the pipeline scan json file")
