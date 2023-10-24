@@ -1,5 +1,5 @@
 # Pipeline2junitxml
-Reads the JSON output of a Veracode Pipeline Scan and converts into a standard JUnit test results XML file.
+Reads the JSON output of a Veracode Pipeline Scan and converts it into a standard JUnit test results XML file.
 
 <b>USAGE:  python pipeline2junitxml.py -f <results.json> --xml_name <junit_results.xml></b>
 		
