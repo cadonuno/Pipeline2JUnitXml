@@ -157,7 +157,7 @@ def generateXmlInternalNodes(elements, testSuitesNode):
 				testCaseNode.set("time", "1.000000")
 
 				failureNode = ET.SubElement(testCaseNode, "failure")
-				failureNode.set("message", finding["issuetype"] + " found at " + scope)
+				failureNode.set("message", f'{finding["issuetype"]} found at {scope} on lin {elementNode[0]["files"]["source_file"]["line"]}')
 				failureNode.set("type", "ScanFinding")
 				failureNode.text = finding["displaytext"]
 
