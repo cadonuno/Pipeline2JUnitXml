@@ -152,19 +152,17 @@ def generateXmlInternalNodes(elements, testSuitesNode):
 			testCaseElement.set("name", scope)
 			for finding in elementNode:
 				testCaseNode = ET.SubElement(testCaseElement, "testcase")				
-				testCaseNode.set("name", f'{finding["issueid"]}: {severityStrings[finding["severity"]]} Severity Finding - CWE {finding["cweid"]}')
+				testCaseNode.set("name", f'{scope}:{finding["line"]} - CWE {finding["cweid"]}: {severityStrings[finding["severity"]]} Severity Finding')
 				testCaseNode.set("classname", scope)
 				testCaseNode.set("time", "1.000000")
 
 				failureNode = ET.SubElement(testCaseNode, "failure")
-				failureNode.set("message", f'{finding["issuetype"]} found at {scope} on line {finding["line"]}')
+				failureNode.set("message", f'{finding["issuetype"]}')
 				failureNode.set("type", "ScanFinding")
 				failureNode.text = finding["displaytext"]
 
 		elif elementNode:
 			generateXmlInternalNodes(elementNode, testSuitesNode)
-
-			
 
 def generateXML():
 	try:
